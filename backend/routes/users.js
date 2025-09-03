@@ -10,12 +10,10 @@
 import Fastify from 'fastify';
 import sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
-import { fileURLToPath } from 'url';
 import path from 'path';
 import bcrypt from 'bcrypt';
 import { authenticate } from '../auth/jwt.js';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const dbPath = process.env.DATABASE_PATH || path.join(__dirname, '../data/database.sqlite');
 
 export default async function userRoutes(fastify, opts) {

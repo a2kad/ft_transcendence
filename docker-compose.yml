@@ -1,8 +1,9 @@
-version: '3.8'
 services:
   backend:
     build: ./backend
     volumes:
+      - ./backend:/app
+      - /app/node_modules
       - sqlite_data:/data
     ports:
       - "3001:3001"

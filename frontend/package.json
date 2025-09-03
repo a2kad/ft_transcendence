@@ -7,7 +7,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vite": "^4.0.0"
+    "better-sqlite3": "^8.0.0"
   },
   "devDependencies": {
     "typescript": "^5.0.0",
