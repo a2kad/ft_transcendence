@@ -7,7 +7,10 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "fastify": "^4.0.0",
+    "@fastify/jwt": "^10.0.0",
+    "bcrypt": "^6.0.0",
+    "fastify": "^5.5.0",
+    "sqlite": "^5.1.1",
     "sqlite3": "^5.1.6"
   }
 }
