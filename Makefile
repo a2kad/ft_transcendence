@@ -5,7 +5,7 @@ default: up
 
 # Start the application
 up:
-	docker compose up -d
+	docker compose up
 
 # Stop the application
 down:

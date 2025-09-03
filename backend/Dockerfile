@@ -6,9 +6,9 @@ WORKDIR /app
 COPY package*.json ./
 
 # Устанавливаем зависимости прямо в контейнере
-RUN apk add --no-cache python3 make g++ python3-dev py3-distutils \
+RUN apk add --no-cache python3 make g++ python3-dev py3-setuptools \
     && npm install --build-from-source \
-    && apk del python3-dev py3-distutils make g++
+    && apk del python3-dev py3-setuptools make g++
 
 # Копируем остальной код
 COPY . .
