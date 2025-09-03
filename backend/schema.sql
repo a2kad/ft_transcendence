@@ -1,0 +1,29 @@
+-- SQLite schema for user management
+CREATE TABLE IF NOT EXISTS users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  username TEXT UNIQUE NOT NULL,
+  password TEXT NOT NULL,
+  displayName TEXT,
+  avatar TEXT DEFAULT '',
+  wins INTEGER DEFAULT 0,
+  losses INTEGER DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS friends (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  userId INTEGER NOT NULL,
+  friendId INTEGER NOT NULL,
+  FOREIGN KEY(userId) REFERENCES users(id),
+  FOREIGN KEY(friendId) REFERENCES users(id)
+);
+
+CREATE TABLE IF NOT EXISTS matches (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user1 INTEGER NOT NULL,
+  user2 INTEGER NOT NULL,
+  winner INTEGER,
+  date TEXT NOT NULL,
+  FOREIGN KEY(user1) REFERENCES users(id),
+  FOREIGN KEY(user2) REFERENCES users(id),
+  FOREIGN KEY(winner) REFERENCES users(id)
+);
