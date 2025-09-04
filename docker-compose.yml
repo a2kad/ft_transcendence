@@ -5,10 +5,13 @@ services:
       - ./backend:/app
       - /app/node_modules
       - sqlite_data:/data
+      - ./backend/certs:/app/certs
     ports:
       - "3001:3001"
     environment:
       - DATABASE_PATH=/data/database.sqlite
+      - SSL_KEY=/app/certs/server.key
+      - SSL_CERT=/app/certs/server.cert
   frontend:
     build: ./frontend
     ports:

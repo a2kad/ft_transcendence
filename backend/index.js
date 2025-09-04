@@ -2,14 +2,15 @@ import Fastify from 'fastify';
 import userRoutes from './routes/users.js';
 import { registerJwt } from './auth/jwt.js';
 import fs from 'fs';
+import https from 'https'
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const keyPath = path.join(__dirname, 'cert', 'server.key');
-const certPath = path.join(__dirname, 'cert', 'server.cert');
+const keyPath = path.join(__dirname, 'certs', 'server.key');
+const certPath = path.join(__dirname, 'certs', 'server.cert');
 
 const fastify = Fastify({
   logger: true,

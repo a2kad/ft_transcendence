@@ -3,3 +3,5 @@ Place your SSL certificate files here:
 - server.cert (certificate)
 For development, you can generate self-signed certificates using OpenSSL:
 openssl req -x509 -newkey rsa:4096 -keyout server.key -out server.cert -days 365 -nodes -subj "/CN=localhost"
+
+openssl req -x509 -newkey rsa:4096 -keyout backend/certs/server.key -out backend/certs/server.cert -days 365 -nodes -subj "/CN=localhost"
