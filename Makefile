@@ -1,7 +1,6 @@
 default: up
 
-up:
-	certs
+up: certs
 	docker compose up
 
 certs:

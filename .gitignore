@@ -1,9 +1,0 @@
-# Ignore environment files
-.env
-# Ignore node modules
-backend/node_modules/
-frontend/node_modules/
-# Ignore SQLite data volume
-backend/data/
-
-backend/certs/*.key
