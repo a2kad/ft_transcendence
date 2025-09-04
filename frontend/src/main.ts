@@ -10,6 +10,7 @@ function renderHome() {
           <nav class="container mx-auto flex justify-between items-center py-4 px-6">
             <div class="text-2xl font-bold">Transcendence</div>
             <ul class="flex gap-6">
+			<h1>Test</h1>
               <li><a href="/" class="hover:underline" id="menu-home">Home</a></li>
               <li><a href="/profile" class="hover:underline" id="menu-profile">Profile</a></li>
             </ul>
